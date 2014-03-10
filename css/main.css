@@ -12,19 +12,6 @@ h1 {
 	letter-spacing: 3px;
 }
 
-input {
-	height: 25px;
-	width: 400px;
-	text-indent: 7px;
-	margin-top: 20px;
-	font-size: 15px;
-	letter-spacing: 1px;
-}
-
-input:hover {
-	border-color: 
-}
-
 ul {
 	border: 1px solid red;
 	font-family: helvetica, sans-serif;
@@ -41,12 +28,55 @@ li {
 	padding-left: 5px;
 	padding-bottom: 10px;
 }
+
+/******  Input Area  ******/
+form {
+	/*border: 1px solid red;*/
+}
+
+input {
+	display: inline-block;
+	height: 25px;
+	width: 350px;
+	text-indent: 7px;
+	margin-top: 20px;
+	font-size: 15px;
+	letter-spacing: 1px;
+}
+
+input:hover {
+	border-color: 
+}
+
+
+#button {
+	position: relative;
+	margin: 0px 12px 0px 6px;
+	top: 4px;
+	display: inline-block;
+	padding-top: 1px;
+	border-radius: 50%;
+	border: 2px solid rgba(0,0,0,.5);
+	background-color: #99ffcc;
+	text-align: center;
+	cursor: pointer;
+}
+
+#button p {
+	display: inline-block;
+	margin: 0 auto;
+	height: 23px;
+	width: 23px;
+	font-weight: bold;
+	font-size: 24px;
+}
+
 /******  Area where items appear  ******/
 .list-items {
 	display: inline-block;
 	height: 400px;
 	width: 400px;
-	background-color: rgba(0,0,0,.1);
+	/*background-color: rgba(0,0,0,.1);*/
 }
 
 .list-wrap {
@@ -57,6 +87,12 @@ li {
 	height: 500px;
 	padding: 60px;
 	margin-top: -50px;
+	/*border: 1px solid red;*/
+}
+
+.strike {
+	text-decoration: line-through;
+	color: rgba(0,0,0,.5);
 }
 
 /******  Menu Icon  ******/
