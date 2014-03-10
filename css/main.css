@@ -56,19 +56,26 @@ input:hover {
 	display: inline-block;
 	padding-top: 1px;
 	border-radius: 50%;
-	border: 2px solid rgba(0,0,0,.5);
-	background-color: #99ffcc;
+	border: 2px solid #6bb28f;
+	background-color: white;
 	text-align: center;
 	cursor: pointer;
+	color: #6bb28f;
 }
 
 #button p {
 	display: inline-block;
+	
 	margin: 0 auto;
 	height: 23px;
 	width: 23px;
 	font-weight: bold;
 	font-size: 24px;
+}
+
+#button:hover {
+	background-color: #6bb28f;
+	color: white;
 }
 
 /******  Area where items appear  ******/
