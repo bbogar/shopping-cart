@@ -1,5 +1,6 @@
 body {
 	background-color: white
+	transition: all 1s ease-out;
 }
 
 h1 {
@@ -21,7 +22,7 @@ ul {
 	position: relative;
 	top: 0px;
 	left: 5%;
-	width: 75%;
+	width: 85%;
 }
 
 li {
@@ -32,6 +33,7 @@ li {
 /******  Input Area  ******/
 form {
 	/*border: 1px solid red;*/
+	margin: 0;
 }
 
 input {
@@ -45,44 +47,58 @@ input {
 }
 
 input:hover {
-	border-color: 
+	border-color: rgba(230, 126, 34,.5);
 }
 
 
 #button {
 	position: relative;
-	margin: 0px 12px 0px 6px;
+	margin: 0px 6px 0px 2px;
 	top: 4px;
 	display: inline-block;
-	padding-top: 1px;
-	border-radius: 50%;
-	border: 2px solid #6bb28f;
+	padding-top: 0px;
+	border-radius: 28%;
+	border: 2px solid #16a085;
 	background-color: white;
 	text-align: center;
 	cursor: pointer;
-	color: #6bb28f;
+	color: #16a085;
 }
 
 #button p {
 	display: inline-block;
-	
 	margin: 0 auto;
-	height: 23px;
-	width: 23px;
-	font-weight: bold;
-	font-size: 24px;
+	/*height: 10px;*/
+	width: 28px;
+	font-weight: 900;
+	font-size: 30px;
+	line-height: 23px;
 }
 
 #button:hover {
-	background-color: #6bb28f;
+	background-color: #16a085;
 	color: white;
+	font-weight: bolder;
 }
 
 /******  Area where items appear  ******/
+.item {
+	position: relative;
+	/*display: inline-block;*/
+	float: left;
+	left: .55em;
+	top: .95em;
+	border: 1px solid red;
+}
+
 .list-items {
 	display: inline-block;
 	height: 400px;
 	width: 400px;
+	font-family: "Myriad Pro", Helvetica, sans-serif;
+	color: white;
+	font-size: 20px;
+	border: 1px solid red;
 	/*background-color: rgba(0,0,0,.1);*/
 }
 
@@ -98,8 +114,9 @@ input:hover {
 }
 
 .strike {
+	/* Added when item is clicked */
 	text-decoration: line-through;
-	color: rgba(0,0,0,.5);
+	color: rgba(255,255,255,.5);
 }
 
 /******  Menu Icon  ******/
@@ -109,6 +126,7 @@ input:hover {
   	padding-left: 1.25em;
   	right: -180px;
   	top: 2px;
+  	clear: both;
   /*border: 1px solid red;*/
 }
 
@@ -121,7 +139,50 @@ input:hover {
   height: 0.125em;
   border-top: 0.375em double #000;
   border-bottom: 0.125em solid #000;
+  clear: both;
 }
+
+.box-menu span {
+	/* Container Properties */
+	width: 0;
+	left: 22px;
+	padding: 0;
+	position: absolute;
+	overflow: hidden;
+	top: 4px;
+
+	/* Text Properties */
+	font-family: "Myriad Pro", Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	letter-spacing: .7px;
+	white-space: nowrap;
+	line-height: 30px;
+
+	/* CSS Transition */
+	-webkit-transition: .25s;
+	   -moz-transition: .25s;
+	        transition: .25s;
+
+	background-color: #34495e;
+	color: #7f8c8d;
+}
+
+#edit {
+	position: absolute;
+	top: 30px;
+}
+
+.list-items a:hover span {
+	width: 60px;
+	padding: 0 20px;
+	overflow: visible;
+}
+
+.list-items a span:hover {
+	color: white;
+}
+
 
 /******  Background image container  ******/
 .main {
