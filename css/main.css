@@ -1,6 +1,5 @@
 body {
 	background-color: white
-	transition: all 1s ease-out;
 }
 
 h1 {
@@ -13,26 +12,10 @@ h1 {
 	letter-spacing: 3px;
 }
 
-ul {
-	border: 1px solid red;
-	font-family: helvetica, sans-serif;
-	color: white;
-	font-size: 1.1em;
-	text-align: left;
-	position: relative;
-	top: 0px;
-	left: 5%;
-	width: 85%;
-}
 
-li {
-	padding-left: 5px;
-	padding-bottom: 10px;
-}
 
 /******  Input Area  ******/
 form {
-	/*border: 1px solid red;*/
 	margin: 0;
 }
 
@@ -82,28 +65,52 @@ input:hover {
 }
 
 /******  Area where items appear  ******/
+ul {
+	display: inline-block;
+	position: relative;
+	top: 10px;
+	left: -22px;
+	width: 350px;
+	font-family: helvetica, sans-serif;
+	color: white;
+	font-size: 1.1em;
+	padding: 0;
+	list-style: none;
+	border: 1px solid red;
+	/*text-align: left;*/
+}
+
 .item {
 	position: relative;
 	/*display: inline-block;*/
-	float: left;
-	left: .55em;
-	top: .95em;
-	border: 1px solid red;
+	width: 350px;
+	/*float: left;*/
+	/*clear: both;*/
+	/*left: .50em;*/
+	padding: 5px 0;
+	/*margin-top: 10px;*/
+	border: 1px solid blue;
 }
 
-.list-items {
+.item:hover {
+	cursor: pointer;
+}
+
+/*#listItems {
 	display: inline-block;
-	height: 400px;
-	width: 400px;
+	position: relative;
+	float: left;
+	left: 50px;
+	/*height: 400px;
+	width: 200px;
 	font-family: "Myriad Pro", Helvetica, sans-serif;
 	color: white;
 	font-size: 20px;
-	border: 1px solid red;
-	/*background-color: rgba(0,0,0,.1);*/
-}
+	/*border: 1px solid blue;*/
+	/*background-color: rgba(0,0,0,.1);
+}*/
 
 .list-wrap {
-	/*position: relative;*/
 	display: inline-block;
 	background-color: rgba(0,0,0,.3);
 	width: 500px;
@@ -119,68 +126,27 @@ input:hover {
 	color: rgba(255,255,255,.5);
 }
 
-/******  Menu Icon  ******/
-.box-menu {
-	display: inline-block;
-  	position: relative;
-  	padding-left: 1.25em;
-  	right: -180px;
-  	top: 2px;
-  	clear: both;
-  /*border: 1px solid red;*/
+/******  Edit + Delete  ******/
+
+a {
+	font-size: 17px;
 }
 
-.box-menu:before {
-  content: "";
-  position: absolute;
-  top: 0.25em;
-  left: 0;
-  width: 1em;
-  height: 0.125em;
-  border-top: 0.375em double #000;
-  border-bottom: 0.125em solid #000;
-  clear: both;
+.edit {
+	/*position: absolute;*/
+	/*right: 75px;*/
+	margin-left: 55%;
+	border: 1px solid white;
+	color: red;
+	text-decoration: none;
 }
 
-.box-menu span {
-	/* Container Properties */
-	width: 0;
-	left: 22px;
-	padding: 0;
-	position: absolute;
-	overflow: hidden;
-	top: 4px;
-
-	/* Text Properties */
-	font-family: "Myriad Pro", Helvetica, sans-serif;
-	font-size: 15px;
-	font-weight: bold;
-	letter-spacing: .7px;
-	white-space: nowrap;
-	line-height: 30px;
-
-	/* CSS Transition */
-	-webkit-transition: .25s;
-	   -moz-transition: .25s;
-	        transition: .25s;
-
-	background-color: #34495e;
-	color: #7f8c8d;
-}
-
-#edit {
-	position: absolute;
-	top: 30px;
-}
-
-.list-items a:hover span {
-	width: 60px;
-	padding: 0 20px;
-	overflow: visible;
-}
-
-.list-items a span:hover {
-	color: white;
+.delete {
+	/*position: absolute;*/
+	float: right;
+	border: 1px solid white;
+	color: red;
+	text-decoration: none;
 }
 
 
