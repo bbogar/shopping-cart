@@ -3,7 +3,7 @@
 function addItem() {
 	if ($("input").val() == "") {
 		alert("Please enter an item");
-		return false;
+		preventDefault();
 		$(".input").focus();
 	}
 	var item=$("input[name=checkListItem]").val();
@@ -23,11 +23,13 @@ $(document).ready(function(){
 	$(".input").focus();
 //gets the value when '+' is clicked
 	$("#button").click(addItem);
+	$(".input").focus();
 //gets the value when 'enter' is pressed
 	$(".input").on("keydown", function(event){
-		if(event.keyCode == 13) {
+		if(event.keyCode == 13) { 
+			event.preventDefault();
 		   addItem();
-		   //alert("enter was pressed");
+		   console.log("enter was pressed");
 		}
 	});
 	$(".input").focus();
@@ -42,13 +44,23 @@ $(document).ready(function(){
 
 //Edits item 
 	$(document).on("click", ".edit", function(){
+		if ($(this).prev().attr("contenteditable"))
+				$(this).prev().removeAttr("contenteditable");
+		else $(this).prev().attr("contenteditable", "true");
+		//$(this).prev().attr("contenteditable", "true");
+		$(this).prev().focus();
 		console.log("Edit was clicked");
 	});
-
+	
 //adds strikethrough and fades list item 
 	$(document).on("click", ".item", function(){
 		$(this).toggleClass("strike");
 		console.log("item was clicked");
+	});
+
+//adds highlight to item being hovered over
+	$(document).on("hover", ".item", function(){
+		$(this).toggleClass("hover");
 	});
 
 
