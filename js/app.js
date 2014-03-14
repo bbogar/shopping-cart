@@ -51,6 +51,15 @@ $(document).ready(function(){
 		$(this).prev().focus();
 		console.log("Edit was clicked");
 	});
+
+	$(document).on("dblclick", ".item", function(){
+		if ($(this).attr("contenteditable"))
+				$(this).removeAttr("contenteditable");
+		else $(this).attr("contenteditable", "true");
+		//$(this).prev().attr("contenteditable", "true");
+		$(this).focus();
+	});
+
 	
 //adds strikethrough and fades list item 
 	$(document).on("click", ".item", function(){
