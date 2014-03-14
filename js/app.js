@@ -56,7 +56,6 @@ $(document).ready(function(){
 		if ($(this).attr("contenteditable"))
 				$(this).removeAttr("contenteditable");
 		else $(this).attr("contenteditable", "true");
-		//$(this).prev().attr("contenteditable", "true");
 		$(this).focus();
 	});
 
@@ -64,12 +63,9 @@ $(document).ready(function(){
 //adds strikethrough and fades list item 
 	$(document).on("dblclick", ".item", function(){
 		$(this).toggleClass("strike");
+		//event.preventDefault();
+		//document.selection.empty();
 		console.log("item was clicked");
-	});
-
-//adds highlight to item being hovered over
-	$(document).on("hover", ".item", function(){
-		$(this).toggleClass("hover");
 	});
 
 
