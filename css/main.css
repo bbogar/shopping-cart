@@ -131,24 +131,29 @@ ul {
 	position: relative;
 	float: right;
 	clear: both;
-	top: -24px;
-	left: -77px;
+	top: -25px;
+	left: -85px;
 	width: 50px;
-	border: 1px solid white;
-	color: red;
+	border: 2px solid white;
+	font-family: 'Ubuntu Mono', sans-serif;
+	/*color: red;*/
 	text-decoration: none;
-	font-size: 18px;
+	font-size: 16px;
+	padding: 3px;
 }
 
 .delete {
 	position: relative;
 	float: right;
-	top: -44px;
+	top: -51px;
 	clear: both;
-	border: 1px solid white;
-	color: red;
+	border: 2px solid white;
+	font-family: 'Ubuntu Mono', sans-serif;
+	/*color: red;*/
 	text-decoration: none;
-	font-size: 18px;
+	font-size: 16px;
+	width: 67px;
+	padding: 3px;
 }
 
 
