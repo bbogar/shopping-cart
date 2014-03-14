@@ -52,7 +52,7 @@ $(document).ready(function(){
 		console.log("Edit was clicked");
 	});
 
-	$(document).on("dblclick", ".item", function(){
+	$(document).on("click", ".item", function(){
 		if ($(this).attr("contenteditable"))
 				$(this).removeAttr("contenteditable");
 		else $(this).attr("contenteditable", "true");
@@ -62,7 +62,7 @@ $(document).ready(function(){
 
 	
 //adds strikethrough and fades list item 
-	$(document).on("click", ".item", function(){
+	$(document).on("dblclick", ".item", function(){
 		$(this).toggleClass("strike");
 		console.log("item was clicked");
 	});
